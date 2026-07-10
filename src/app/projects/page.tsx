@@ -47,7 +47,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Standard Projects Portfolio List */}
-      <Projects openModal={openModal} />
+      <Projects />
 
       <Footer />
 

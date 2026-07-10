@@ -52,9 +52,9 @@ body {
     background-color: var(--bg-primary);
     color: var(--text-white);
     font-family: var(--font-sans);
-    line-height: 1.6;
+    line-height: 1.7;
     overflow-x: hidden;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
 }
@@ -149,10 +149,10 @@ a {
 .section-desc {
     font-family: var(--font-sans);
     color: var(--text-muted);
-    font-size: 16px;
+    font-size: 18px;
     max-width: 600px;
     margin: 0 auto 48px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 /* ----------------------------------
@@ -412,10 +412,10 @@ a {
 }
 
 .hero-desc {
-    font-size: clamp(14px, 2vw, 18px);
+    font-size: clamp(16px, 2.2vw, 20px);
     color: var(--text-muted);
-    font-weight: 300;
-    line-height: 1.6;
+    font-weight: 400;
+    line-height: 1.7;
     margin-bottom: 40px;
 }
 
@@ -623,8 +623,8 @@ a {
 
 .about-text {
     color: var(--text-muted);
-    font-size: 15px;
-    font-weight: 300;
+    font-size: 17px;
+    font-weight: 400;
     line-height: 1.7;
     margin-bottom: 20px;
 }
@@ -672,8 +672,8 @@ a {
 
 .pillar-info p {
     color: var(--text-muted);
-    font-size: 13px;
-    font-weight: 300;
+    font-size: 15px;
+    font-weight: 400;
 }
 
 /* ----------------------------------
@@ -802,9 +802,9 @@ a {
 }
 
 .project-specs {
-    font-size: 13px;
+    font-size: 15px;
     color: var(--text-muted);
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 24px;
     opacity: 0;
     transition: var(--transition-smooth);
@@ -889,12 +889,12 @@ a {
 }
 
 .upcoming-desc {
-    font-size: 13px;
+    font-size: 15px;
     color: var(--text-muted);
-    font-weight: 300;
-    max-width: 260px;
+    font-weight: 400;
+    max-width: 280px;
     margin: 0 auto 28px;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 /* ----------------------------------
@@ -956,9 +956,9 @@ a {
 
 .amenity-card p {
     color: var(--text-muted);
-    font-size: 13px;
-    font-weight: 300;
-    line-height: 1.6;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
 }
 
 /* ----------------------------------
@@ -1083,7 +1083,8 @@ a {
 
 .contact-lead-text {
     color: var(--text-muted);
-    font-weight: 300;
+    font-weight: 400;
+    font-size: 16px;
     margin-bottom: 40px;
 }
 
@@ -1214,9 +1215,9 @@ a {
 }
 
 .panel-form-desc {
-    font-size: 13px;
+    font-size: 15px;
     color: var(--text-muted);
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 30px;
 }
 
@@ -1431,8 +1432,8 @@ textarea + .floating-label {
 
 .brand-desc {
     color: var(--text-muted);
-    font-size: 13px;
-    font-weight: 300;
+    font-size: 15px;
+    font-weight: 400;
     max-width: 280px;
 }
 
@@ -1474,8 +1475,8 @@ textarea + .floating-label {
 
 .footer-links a {
     color: var(--text-muted);
-    font-size: 13px;
-    font-weight: 300;
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .footer-links a:hover {
@@ -1485,8 +1486,8 @@ textarea + .floating-label {
 
 .footer-newsletter p {
     color: var(--text-muted);
-    font-size: 13px;
-    font-weight: 300;
+    font-size: 15px;
+    font-weight: 400;
     margin-bottom: 20px;
 }
 
@@ -1654,9 +1655,9 @@ textarea + .floating-label {
 }
 
 .modal-desc {
-    font-size: 13px;
+    font-size: 15px;
     color: var(--text-muted);
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 30px;
 }
 
