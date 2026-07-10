@@ -1,40 +1,25 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface HeaderProps {
   openModal: (project?: string, subject?: string) => void;
 }
 
 export default function Header({ openModal }: HeaderProps) {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-
-      // Highlight active nav links on scroll
-      const sections = ["home", "about", "projects", "why-us", "contact"];
-      let currentSection = "home";
-      const scrollPosition = window.scrollY + 120; // Offset for header height
-
-      for (const sectionId of sections) {
-        const el = document.getElementById(sectionId);
-        if (el) {
-          const top = el.offsetTop;
-          const height = el.offsetHeight;
-          if (scrollPosition >= top && scrollPosition < top + height) {
-            currentSection = sectionId;
-          }
-        }
-      }
-      setActiveSection(currentSection);
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial run
+    handleScroll(); // Initial check
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -53,10 +38,16 @@ export default function Header({ openModal }: HeaderProps) {
     document.body.classList.remove("no-scroll");
   };
 
+  const isActive = (path: string) => {
+    if (path === "/" && pathname === "/") return true;
+    if (path !== "/" && pathname?.startsWith(path)) return true;
+    return false;
+  };
+
   return (
     <header className={`main-header ${isScrolled ? "scrolled" : ""}`}>
       <div className="container header-container">
-        <a href="#home" className="logo" onClick={closeNav}>
+        <Link href="/" className="logo" onClick={closeNav}>
           <svg className="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M50 15L80 40V80H65V60H35V80H20V40L50 15Z" stroke="url(#gold-grad-header)" stroke-width="3" stroke-linejoin="round"/>
             <path d="M50 25L70 42V70H60V50H40V70H30V42L50 25Z" stroke="url(#gold-grad-header)" stroke-width="2" stroke-linejoin="round" opacity="0.7"/>
@@ -73,7 +64,7 @@ export default function Header({ openModal }: HeaderProps) {
             <span className="brand-name">SIDDHIVINAYAK</span>
             <span className="brand-sub">DEVELOPERS</span>
           </div>
-        </a>
+        </Link>
 
         {/* Hamburger Menu Icon */}
         <button 
@@ -90,61 +81,78 @@ export default function Header({ openModal }: HeaderProps) {
         <nav className={`nav-menu ${isNavOpen ? "open" : ""}`}>
           <ul>
             <li>
-              <a 
-                href="#home" 
-                className={`nav-link ${activeSection === "home" ? "active" : ""}`}
+              <Link 
+                href="/" 
+                className={`nav-link ${isActive("/") ? "active" : ""}`}
                 onClick={closeNav}
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a 
-                href="#about" 
-                className={`nav-link ${activeSection === "about" ? "active" : ""}`}
+              <Link 
+                href="/about" 
+                className={`nav-link ${isActive("/about") ? "active" : ""}`}
                 onClick={closeNav}
               >
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a 
-                href="#projects" 
-                className={`nav-link ${activeSection === "projects" ? "active" : ""}`}
+              <Link 
+                href="/projects" 
+                className={`nav-link ${isActive("/projects") ? "active" : ""}`}
                 onClick={closeNav}
               >
                 Projects
-              </a>
+              </Link>
             </li>
             <li>
-              <a 
-                href="#why-us" 
-                className={`nav-link ${activeSection === "why-us" ? "active" : ""}`}
+              <Link 
+                href="/why-us" 
+                className={`nav-link ${isActive("/why-us") ? "active" : ""}`}
                 onClick={closeNav}
               >
                 Why Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a 
-                href="#contact" 
-                className={`nav-link ${activeSection === "contact" ? "active" : ""}`}
+              <Link 
+                href="/faq" 
+                className={`nav-link ${isActive("/faq") ? "active" : ""}`}
+                onClick={closeNav}
+              >
+                FAQ
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="/privacy" 
+                className={`nav-link ${isActive("/privacy") ? "active" : ""}`}
+                onClick={closeNav}
+              >
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="/contact" 
+                className={`nav-link ${isActive("/contact") ? "active" : ""}`}
                 onClick={closeNav}
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
 
-        <div className="header-cta">
-          <button 
-            className="btn btn-primary" 
-            onClick={() => openModal("", "Header Navigation Button")}
-          >
-            Enquire Now
-          </button>
-        </div>
+        {/* Right CTA */}
+        <button 
+          className="btn btn-primary header-cta" 
+          onClick={() => openModal("", "Header Action Enquiry")}
+        >
+          Enquire Now
+        </button>
       </div>
     </header>
   );

@@ -64,21 +64,21 @@ export default function Footer() {
         <div className="footer-links">
           <h4>Quick Navigation</h4>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Legacy</a></li>
-            <li><a href="#projects">Signature Projects</a></li>
-            <li><a href="#why-us">Why Choose Us</a></li>
-            <li><a href="#contact">Contact Desk</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Legacy</a></li>
+            <li><a href="/projects">Signature Projects</a></li>
+            <li><a href="/why-us">Why Choose Us</a></li>
+            <li><a href="/contact">Contact Desk</a></li>
           </ul>
         </div>
 
         <div className="footer-links">
           <h4>Projects Portal</h4>
           <ul>
-            <li><a href="#projects">Siddhivinayak Vista</a></li>
-            <li><a href="#projects">Signature Villas</a></li>
-            <li><a href="#projects">Siddhivinayak Lumina</a></li>
-            <li><a href="#projects">Upcoming Launches</a></li>
+            <li><a href="/projects/vista">Siddhivinayak Vista</a></li>
+            <li><a href="/projects/villas">Signature Villas</a></li>
+            <li><a href="/projects/lumina">Siddhivinayak Lumina</a></li>
+            <li><a href="/projects">Upcoming Launches</a></li>
           </ul>
         </div>
 
