@@ -1,27 +1,29 @@
 /* 
-   Siddhivinayak Developers - Luxury Real Estate Stylesheet
+   Siddhivinayak Developers - Simple Light Beige/Off-White Theme
    Design System:
-   - Primary BG: Obsidian Black (#0B0C10)
-   - Secondary BG: Dark Charcoal (#12131C)
-   - Accent Primary: Champagne Gold (#c5a880)
-   - Accent Light: Cream Gold (#e5d4bc)
-   - Accent Dark: Deep Bronze (#987a55)
-   - Text Primary: Pure White / Light Pearl (#F5F5F7)
-   - Text Muted: Silver Grey (#8e94a5)
+   - Primary BG: Warm Off-White (#FAF8F5)
+   - Secondary BG: Warm Sand Beige (#F3ECE0)
+   - Card Surface: Pure White (#FFFFFF)
+   - Accent Primary: Warm Tan Bronze (#8E7E65)
+   - Accent Light: Soft Tan (#A8987E)
+   - Accent Dark: Deep Bronze-Brown (#6E5E4A)
+   - Text Primary: Dark Charcoal (#2C302E)
+   - Text Muted: Slate Grey (#6B726F)
+   - Text Inverse: Warm Off-White (#FAF8F5)
 */
 
 :root {
-    --bg-primary: #08090c;
-    --bg-secondary: #0f1118;
-    --bg-surface: #141720;
-    --gold: #c5a880;
-    --gold-light: #e5d4bc;
-    --gold-dark: #987a55;
-    --text-white: #f5f5f7;
-    --text-muted: #8e94a5;
-    --text-dark: #08090c;
-    --border-color: rgba(197, 168, 128, 0.18);
-    --border-glow: rgba(197, 168, 128, 0.4);
+    --bg-primary: #FAF8F5;
+    --bg-secondary: #F3ECE0;
+    --bg-surface: #FFFFFF;
+    --gold: #8E7E65;
+    --gold-light: #A8987E;
+    --gold-dark: #6E5E4A;
+    --text-white: #2C302E; /* Primary dark text */
+    --text-muted: #6B726F; /* Secondary text */
+    --text-dark: #FAF8F5;  /* Inverse light text */
+    --border-color: rgba(142, 126, 101, 0.2);
+    --border-glow: rgba(142, 126, 101, 0.45);
     
     /* Configured to bind with Next.js Google Fonts */
     --font-serif: var(--font-serif, 'Playfair Display', Georgia, serif);
@@ -29,7 +31,7 @@
     
     --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     --transition-fast: all 0.2s ease;
-    --glass-bg: rgba(15, 17, 24, 0.75);
+    --glass-bg: rgba(255, 255, 255, 0.75);
     --glass-blur: blur(15px);
 }
 
@@ -45,7 +47,7 @@
 html {
     scroll-behavior: smooth;
     scrollbar-width: thin;
-    scrollbar-color: var(--gold) var(--bg-primary);
+    scrollbar-color: var(--gold) var(--bg-secondary);
 }
 
 body {
@@ -168,7 +170,7 @@ a {
     letter-spacing: 2px;
     text-transform: uppercase;
     padding: 16px 36px;
-    border-radius: 0px; /* Luxury sharp edge design */
+    border-radius: 0px; /* Sharp edge modern minimalist design */
     cursor: pointer;
     transition: var(--transition-smooth);
     position: relative;
@@ -186,13 +188,13 @@ a {
 .btn-primary:hover {
     background-color: transparent;
     color: var(--gold);
-    box-shadow: 0 0 15px var(--border-glow);
+    box-shadow: 0 4px 15px rgba(142, 126, 101, 0.2);
 }
 
 .btn-secondary {
     background-color: transparent;
     color: var(--text-white);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(44, 48, 46, 0.4);
 }
 
 .btn-secondary:hover {
@@ -230,7 +232,7 @@ a {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(8, 9, 12, 0.7);
+    background: rgba(250, 248, 245, 0.8);
     backdrop-filter: var(--glass-blur);
     border-bottom: 1px solid var(--border-color);
     transition: var(--transition-smooth);
@@ -238,8 +240,8 @@ a {
 
 .main-header.scrolled {
     padding: 12px 0;
-    background: rgba(8, 9, 12, 0.95);
-    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.4);
+    background: rgba(250, 248, 245, 0.97);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
 }
 
 .header-container {
@@ -367,7 +369,7 @@ a {
     height: 100vh;
     display: flex;
     align-items: center;
-    background-image: linear-gradient(to bottom, rgba(8, 9, 12, 0.4), rgba(8, 9, 12, 0.95)), url('/assets/hero_villa.png');
+    background-image: linear-gradient(to bottom, rgba(250, 248, 245, 0.45), rgba(250, 248, 245, 0.95)), url('/assets/hero_villa.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -380,7 +382,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 70% 30%, rgba(197, 168, 128, 0.05) 0%, transparent 60%);
+    background: radial-gradient(circle at 70% 30%, rgba(142, 126, 101, 0.08) 0%, transparent 60%);
     pointer-events: none;
 }
 
@@ -409,6 +411,7 @@ a {
     line-height: 1.15;
     margin-bottom: 24px;
     letter-spacing: -1px;
+    color: var(--text-white);
 }
 
 .hero-desc {
@@ -492,19 +495,18 @@ a {
 }
 
 .stat-card {
-    background: rgba(20, 23, 32, 0.6);
-    backdrop-filter: var(--glass-blur);
+    background: var(--bg-surface);
     border: 1px solid var(--border-color);
     padding: 30px 24px;
     text-align: center;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
     transition: var(--transition-smooth);
 }
 
 .stat-card:hover {
     transform: translateY(-8px);
     border-color: var(--border-glow);
-    box-shadow: 0 15px 45px rgba(197, 168, 128, 0.1);
+    box-shadow: 0 10px 25px rgba(142, 126, 101, 0.12);
 }
 
 .stat-number {
@@ -562,13 +564,8 @@ a {
     width: 100%;
     height: 480px;
     object-fit: cover;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-    filter: grayscale(15%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     transition: var(--transition-smooth);
-}
-
-.about-img:hover {
-    filter: grayscale(0%);
 }
 
 .image-accent-border {
@@ -593,7 +590,7 @@ a {
     background: var(--gold);
     color: var(--text-dark);
     padding: 24px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -645,7 +642,7 @@ a {
     flex-shrink: 0;
     width: 48px;
     height: 48px;
-    background-color: var(--bg-surface);
+    background-color: var(--bg-secondary);
     border: 1px solid var(--border-color);
     color: var(--gold);
     display: flex;
@@ -658,7 +655,7 @@ a {
     background-color: var(--gold);
     color: var(--text-dark);
     border-color: var(--gold);
-    box-shadow: 0 0 15px var(--border-glow);
+    box-shadow: 0 4px 12px rgba(142, 126, 101, 0.2);
 }
 
 .pillar-info h4 {
@@ -692,7 +689,7 @@ a {
 }
 
 .filter-btn {
-    background: transparent;
+    background: var(--bg-surface);
     border: 1px solid var(--border-color);
     color: var(--text-muted);
     padding: 12px 28px;
@@ -708,7 +705,7 @@ a {
 .filter-btn:hover, .filter-btn.active {
     border-color: var(--gold);
     color: var(--gold);
-    background-color: rgba(197, 168, 128, 0.05);
+    background-color: var(--bg-primary);
 }
 
 .projects-grid {
@@ -724,10 +721,6 @@ a {
     position: relative;
     height: 480px;
     transition: var(--transition-smooth);
-}
-
-.project-card.hide {
-    display: none;
 }
 
 .project-img-wrapper {
@@ -754,7 +747,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(8, 9, 12, 0.2) 0%, rgba(8, 9, 12, 0.95) 85%);
+    background: linear-gradient(to bottom, rgba(250, 248, 245, 0.1) 0%, rgba(250, 248, 245, 0.96) 85%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -764,9 +757,9 @@ a {
 
 .project-badge {
     align-self: flex-start;
-    background-color: rgba(8, 9, 12, 0.8);
+    background-color: var(--bg-surface);
     color: var(--gold);
-    border: 1px solid var(--gold);
+    border: 1px solid var(--border-color);
     padding: 6px 14px;
     font-size: 9px;
     letter-spacing: 2px;
@@ -787,7 +780,7 @@ a {
     font-size: 10px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--gold-light);
+    color: var(--gold-dark);
     font-weight: 500;
     display: block;
     margin-bottom: 8px;
@@ -819,7 +812,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
     padding-top: 20px;
     opacity: 0;
     transition: var(--transition-smooth);
@@ -833,7 +826,7 @@ a {
 .project-price {
     font-family: var(--font-serif);
     font-size: 15px;
-    color: var(--gold);
+    color: var(--gold-dark);
     font-weight: 600;
 }
 
@@ -844,7 +837,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle at center, #1b1e2a 0%, #0d0f17 100%);
+    background: var(--bg-surface);
     position: relative;
     padding: 40px;
 }
@@ -855,7 +848,7 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to bottom, rgba(8, 9, 12, 0.1), rgba(8, 9, 12, 0.8));
+    background-image: linear-gradient(to bottom, rgba(250, 248, 245, 0.2), rgba(250, 248, 245, 0.8));
     z-index: 1;
 }
 
@@ -898,20 +891,10 @@ a {
 }
 
 /* ----------------------------------
-   Amenities Section
+   Amenity/Reason Cards (Reused in Why Us)
 ---------------------------------- */
-.amenities-section {
-    padding: 100px 0;
-}
-
-.amenities-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
 .amenity-card {
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-surface);
     border: 1px solid var(--border-color);
     padding: 40px 30px;
     transition: var(--transition-smooth);
@@ -920,13 +903,13 @@ a {
 .amenity-card:hover {
     transform: translateY(-5px);
     border-color: var(--border-glow);
-    box-shadow: 0 10px 35px rgba(0,0,0,0.4);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.03);
 }
 
 .amenity-icon {
     width: 60px;
     height: 60px;
-    background-color: var(--bg-surface);
+    background-color: var(--bg-primary);
     border: 1px solid var(--border-color);
     color: var(--gold);
     display: flex;
@@ -952,6 +935,7 @@ a {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 12px;
+    color: var(--text-white);
 }
 
 .amenity-card p {
@@ -1060,7 +1044,7 @@ a {
 .control-btn:hover {
     border-color: var(--gold);
     color: var(--gold);
-    background-color: rgba(197, 168, 128, 0.05);
+    background-color: var(--bg-primary);
 }
 
 /* ----------------------------------
@@ -1136,7 +1120,7 @@ a {
     color: var(--gold);
 }
 
-/* Luxury Map Placeholder */
+/* Map Container */
 .map-container {
     border: 1px solid var(--border-color);
     height: 220px;
@@ -1147,11 +1131,11 @@ a {
 .map-placeholder {
     width: 100%;
     height: 100%;
-    background-color: #0b0d13;
+    background-color: var(--bg-secondary);
     background-image: 
         radial-gradient(var(--border-color) 1px, transparent 0),
-        linear-gradient(rgba(197, 168, 128, 0.03) 1px, transparent 0),
-        linear-gradient(90deg, rgba(197, 168, 128, 0.03) 1px, transparent 0);
+        linear-gradient(rgba(142, 126, 101, 0.03) 1px, transparent 0),
+        linear-gradient(90deg, rgba(142, 126, 101, 0.03) 1px, transparent 0);
     background-size: 20px 20px, 40px 40px, 40px 40px;
     display: flex;
     align-items: center;
@@ -1197,11 +1181,12 @@ a {
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: 500;
+    color: var(--text-white);
 }
 
 /* Contact Form Side */
 .contact-form-panel {
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-surface);
     border: 1px solid var(--border-color);
     padding: 40px;
 }
@@ -1211,6 +1196,7 @@ a {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 8px;
+    color: var(--text-white);
 }
 
 .panel-form-desc {
@@ -1233,7 +1219,7 @@ a {
 
 .form-control {
     width: 100%;
-    background-color: var(--bg-surface);
+    background-color: var(--bg-primary);
     border: 1px solid var(--border-color);
     color: var(--text-white);
     padding: 16px;
@@ -1246,12 +1232,12 @@ a {
 
 .form-control:focus {
     border-color: var(--gold);
-    box-shadow: 0 0 8px rgba(197, 168, 128, 0.15);
+    background-color: var(--bg-surface);
 }
 
 select.form-control {
     appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23c5a880' stroke-width='2'%3E%3Cpath d='m2 4 4 4 4-4'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%238E7E65' stroke-width='2'%3E%3Cpath d='m2 4 4 4 4-4'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: calc(100% - 16px) center;
     padding-right: 40px;
@@ -1286,14 +1272,14 @@ textarea + .floating-label {
     font-size: 10px;
     font-weight: 600;
     color: var(--gold);
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-surface);
     padding: 0 6px;
 }
 
 /* Fix background on focus inside card surface */
 .contact-form-panel .form-control:focus + .floating-label,
 .contact-form-panel .form-control:not(:placeholder-shown) + .floating-label {
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-surface);
 }
 
 .modal-form-side .form-control:focus + .floating-label,
@@ -1338,7 +1324,7 @@ textarea + .floating-label {
     left: 0;
     height: 16px;
     width: 16px;
-    background-color: var(--bg-surface);
+    background-color: var(--bg-primary);
     border: 1px solid var(--border-color);
     transition: var(--transition-fast);
 }
@@ -1379,7 +1365,7 @@ textarea + .floating-label {
     align-items: flex-start;
     padding: 20px;
     border: 1px solid var(--gold);
-    background-color: rgba(197, 168, 128, 0.05);
+    background-color: rgba(142, 126, 101, 0.05);
     margin-top: 20px;
     animation: fade-in-up 0.5s ease forwards;
 }
@@ -1407,9 +1393,10 @@ textarea + .floating-label {
    Footer
 ---------------------------------- */
 .main-footer {
-    background-color: #06070a;
+    background-color: #EAE5DC; /* Darker beige for structural boundary */
     border-top: 1px solid var(--border-color);
     padding: 80px 0 30px;
+    color: var(--text-white);
 }
 
 .footer-grid {
@@ -1493,6 +1480,7 @@ textarea + .floating-label {
 .newsletter-form {
     display: flex;
     border: 1px solid var(--border-color);
+    background-color: var(--bg-surface);
 }
 
 .newsletter-form input {
@@ -1513,7 +1501,7 @@ textarea + .floating-label {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
     padding-top: 30px;
     display: flex;
     flex-direction: column;
@@ -1541,8 +1529,8 @@ textarea + .floating-label {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(6, 7, 10, 0.85);
-    backdrop-filter: blur(8px);
+    background-color: rgba(44, 48, 46, 0.5); /* Semi transparent dark grey */
+    backdrop-filter: blur(5px);
     z-index: 10000;
     display: flex;
     align-items: center;
@@ -1612,7 +1600,7 @@ textarea + .floating-label {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(8, 9, 12, 0.2), rgba(8, 9, 12, 0.9));
+    background: linear-gradient(to bottom, rgba(250, 248, 245, 0.2), rgba(250, 248, 245, 0.92));
     z-index: 1;
 }
 
@@ -1644,6 +1632,7 @@ textarea + .floating-label {
 
 .modal-form-side {
     padding: 50px 40px;
+    background-color: var(--bg-surface);
 }
 
 .modal-title {
@@ -1651,6 +1640,7 @@ textarea + .floating-label {
     font-size: 26px;
     font-weight: 600;
     margin-bottom: 8px;
+    color: var(--text-white);
 }
 
 .modal-desc {
@@ -1681,7 +1671,7 @@ textarea + .floating-label {
     align-items: center;
     justify-content: center;
     color: white;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     transition: var(--transition-smooth);
 }
 
@@ -1731,10 +1721,6 @@ textarea + .floating-label {
     }
 
     .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .amenities-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     
@@ -1789,7 +1775,7 @@ textarea + .floating-label {
     }
 
     .header-cta {
-        display: none; /* Hide in mobile header, user can use floating actions or form */
+        display: none;
     }
 
     .hero-actions {
@@ -1812,10 +1798,6 @@ textarea + .floating-label {
     .projects-grid {
         grid-template-columns: 1fr;
     }
-    
-    .amenities-grid {
-        grid-template-columns: 1fr;
-    }
 
     .modal-body-grid {
         grid-template-columns: 1fr;
@@ -1834,7 +1816,7 @@ textarea + .floating-label {
     }
 
     .testimonial-slider {
-        height: 250px; /* Give more height for text wrapping */
+        height: 250px;
     }
 
     .testimonial-container {

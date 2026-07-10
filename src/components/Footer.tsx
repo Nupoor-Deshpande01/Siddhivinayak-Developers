@@ -108,7 +108,7 @@ export default function Footer() {
 
       <div className="container footer-bottom">
         <p>
-          &copy; 2026 Siddhivinayak Developers. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
+          &copy; 2026 Siddhivinayak Developers. All Rights Reserved. | <a href="/privacy">Privacy Policy</a> | <a href="/faq">FAQ Desk</a>
         </p>
         <p className="rera-disclaimer">
           *Disclaimer: All visuals, amenities, layouts, and specifications shown are conceptual. Real estate projects are subject to MahaRERA registration permissions.
