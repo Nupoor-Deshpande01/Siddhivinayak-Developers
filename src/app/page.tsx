@@ -8,6 +8,7 @@ import About from "@/components/About";
 import Projects from "@/components/Projects";
 import WhyUs from "@/components/WhyUs";
 import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import EnquiryModal from "@/components/EnquiryModal";
@@ -37,6 +38,7 @@ export default function Home() {
       <Projects />
       <WhyUs />
       <Testimonials />
+      <FAQ />
       <Contact />
       <Footer />
       

@@ -113,7 +113,7 @@ export default function ProjectDetailPage() {
       <section 
         className="hero-section" 
         style={{ 
-          backgroundImage: `linear-gradient(to bottom, rgba(245, 236, 229, 0.15), rgba(245, 236, 229, 0.25)), url('${project.image}')`,
+          backgroundImage: `linear-gradient(to right, rgba(10, 15, 30, 0.7) 0%, rgba(10, 15, 30, 0.4) 35%, rgba(10, 15, 30, 0.05) 100%), url('${project.image}')`,
           height: "60vh",
           minHeight: "450px"
         }}

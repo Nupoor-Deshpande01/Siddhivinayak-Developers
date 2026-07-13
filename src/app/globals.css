@@ -232,7 +232,7 @@ a {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(250, 249, 246, 0.8);
+    background: #F5ECE5;
     backdrop-filter: var(--glass-blur);
     border-bottom: 1px solid var(--border-color);
     transition: var(--transition-smooth);
@@ -240,7 +240,7 @@ a {
 
 .main-header.scrolled {
     padding: 12px 0;
-    background: rgba(250, 249, 246, 0.95);
+    background: #F5ECE5;
     box-shadow: none;
     border-bottom: 1px solid var(--border-color);
 }
@@ -732,7 +732,9 @@ a {
     border: 1px solid var(--border-color);
     overflow: hidden;
     position: relative;
-    height: 480px;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
     transition: var(--transition-smooth);
 }
 
@@ -743,7 +745,7 @@ a {
 .project-img-wrapper {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 260px;
     overflow: hidden;
 }
 
@@ -755,25 +757,13 @@ a {
 }
 
 .project-card:hover .project-img {
-    transform: scale(1.08);
-}
-
-.project-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(250, 249, 246, 0.1) 0%, rgba(250, 249, 246, 0.95) 80%);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 30px;
-    z-index: 10;
+    transform: scale(1.06);
 }
 
 .project-badge {
-    align-self: flex-start;
+    position: absolute;
+    top: 15px;
+    left: 15px;
     background-color: var(--bg-surface);
     color: var(--gold);
     border: 1px solid var(--gold);
@@ -782,47 +772,45 @@ a {
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 600;
+    z-index: 10;
 }
 
 .project-details {
-    transform: translateY(40px);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    background-color: var(--bg-surface);
     transition: var(--transition-smooth);
-}
-
-.project-card:hover .project-details {
-    transform: translateY(0);
 }
 
 .project-loc {
     font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--gold-light);
-    font-weight: 500;
+    color: #6E6259;
+    font-weight: 600;
     display: block;
     margin-bottom: 8px;
 }
 
 .project-name {
     font-family: var(--font-serif);
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 600;
-    color: var(--text-white);
+    color: #222222;
     margin-bottom: 8px;
+    line-height: 1.2;
 }
 
 .project-specs {
-    font-size: 16px;
-    color: var(--text-muted);
+    font-size: 14px;
+    color: #555555;
     font-weight: 400;
-    margin-bottom: 24px;
-    opacity: 0;
-    transition: var(--transition-smooth);
-    transition-delay: 0.1s;
-}
-
-.project-card:hover .project-specs {
+    margin-bottom: 16px;
     opacity: 1;
+    transition: var(--transition-smooth);
 }
 
 .project-footer {
@@ -830,20 +818,15 @@ a {
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid var(--border-color);
-    padding-top: 20px;
-    opacity: 0;
-    transition: var(--transition-smooth);
-    transition-delay: 0.15s;
-}
-
-.project-card:hover .project-footer {
+    padding-top: 16px;
     opacity: 1;
+    transition: var(--transition-smooth);
 }
 
 .project-price {
     font-family: var(--font-serif);
-    font-size: 17px;
-    color: var(--gold);
+    font-size: 18px;
+    color: #222222;
     font-weight: 600;
 }
 

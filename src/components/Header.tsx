@@ -117,24 +117,6 @@ export default function Header({ openModal }: HeaderProps) {
             </li>
             <li>
               <Link 
-                href="/faq" 
-                className={`nav-link ${isActive("/faq") ? "active" : ""}`}
-                onClick={closeNav}
-              >
-                FAQ
-              </Link>
-            </li>
-            <li>
-              <Link 
-                href="/privacy" 
-                className={`nav-link ${isActive("/privacy") ? "active" : ""}`}
-                onClick={closeNav}
-              >
-                Privacy Policy
-              </Link>
-            </li>
-            <li>
-              <Link 
                 href="/contact" 
                 className={`nav-link ${isActive("/contact") ? "active" : ""}`}
                 onClick={closeNav}

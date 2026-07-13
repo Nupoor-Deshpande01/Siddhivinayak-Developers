@@ -107,22 +107,22 @@ export default function Projects() {
                   alt={project.title} 
                   className="project-img" 
                 />
-                <div className="project-overlay">
-                  <div className="project-badge">{project.status}</div>
-                  <div className="project-details">
-                    <span className="project-loc">{project.location}</span>
-                    <h3 className="project-name">{project.title}</h3>
-                    <p className="project-specs">{project.specs}</p>
-                    <div className="project-footer">
-                      <span className="project-price">{project.price}</span>
-                      <Link 
-                        href={`/projects/${project.id}`} 
-                        className="btn btn-outline"
-                      >
-                        Explore Project
-                      </Link>
-                    </div>
-                  </div>
+                <div className="project-badge">{project.status}</div>
+              </div>
+              <div className="project-details">
+                <div>
+                  <span className="project-loc">{project.location}</span>
+                  <h3 className="project-name">{project.title}</h3>
+                  <p className="project-specs">{project.specs}</p>
+                </div>
+                <div className="project-footer">
+                  <span className="project-price">{project.price}</span>
+                  <Link 
+                    href={`/projects/${project.id}`} 
+                    className="btn btn-outline"
+                  >
+                    Explore Project
+                  </Link>
                 </div>
               </div>
             </div>

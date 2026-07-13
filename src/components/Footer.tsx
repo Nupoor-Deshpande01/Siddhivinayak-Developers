@@ -68,6 +68,7 @@ export default function Footer() {
             <li><a href="/about">About Legacy</a></li>
             <li><a href="/projects">Signature Projects</a></li>
             <li><a href="/why-us">Why Choose Us</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
             <li><a href="/contact">Contact Desk</a></li>
           </ul>
         </div>
