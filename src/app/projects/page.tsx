@@ -30,7 +30,7 @@ export default function ProjectsPage() {
       <section 
         className="hero-section" 
         style={{ 
-          backgroundImage: "linear-gradient(to bottom, rgba(8, 9, 12, 0.6), rgba(8, 9, 12, 0.98)), url('/assets/project_commercial.png')",
+          backgroundImage: "linear-gradient(to bottom, rgba(245, 236, 229, 0.15), rgba(245, 236, 229, 0.25)), url('/assets/project_commercial.png')",
           height: "40vh",
           minHeight: "350px",
           display: "flex",
@@ -40,7 +40,7 @@ export default function ProjectsPage() {
         <div className="container" style={{ paddingTop: "80px" }}>
           <span className="section-subtitle">THE SIGNATURE LANDMARKS</span>
           <h1 className="hero-title" style={{ fontSize: "clamp(32px, 5vw, 48px)", margin: "10px 0" }}>Our Projects</h1>
-          <p className="hero-desc" style={{ fontSize: "16px", maxWidth: "600px" }}>
+          <p className="hero-desc" style={{ fontSize: "18px", maxWidth: "600px" }}>
             Explore our curated residential, commercial, and redevelopment developments designed to elevate urban benchmarks.
           </p>
         </div>

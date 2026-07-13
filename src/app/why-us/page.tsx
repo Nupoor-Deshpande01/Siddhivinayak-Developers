@@ -30,7 +30,7 @@ export default function WhyUsPage() {
       <section 
         className="hero-section" 
         style={{ 
-          backgroundImage: "linear-gradient(to bottom, rgba(8, 9, 12, 0.6), rgba(8, 9, 12, 0.98)), url('/assets/hero_villa.png')",
+          backgroundImage: "linear-gradient(to right, rgba(10, 15, 30, 0.7) 0%, rgba(10, 15, 30, 0.4) 35%, rgba(10, 15, 30, 0.05) 100%), url('/assets/hero_villa.png')",
           height: "40vh",
           minHeight: "350px",
           display: "flex",
@@ -40,7 +40,7 @@ export default function WhyUsPage() {
         <div className="container" style={{ paddingTop: "80px" }}>
           <span className="section-subtitle">THE CORE EXCELLENCE</span>
           <h1 className="hero-title" style={{ fontSize: "clamp(32px, 5vw, 48px)", margin: "10px 0" }}>Why Choose Us</h1>
-          <p className="hero-desc" style={{ fontSize: "16px", maxWidth: "600px" }}>
+          <p className="hero-desc" style={{ fontSize: "18px", maxWidth: "600px" }}>
             Discover the structural design engineering, transparent legal deeds, and values that define our brand reputation.
           </p>
         </div>

@@ -1,18 +1,18 @@
 import type { Metadata, Viewport } from "next";
-import { Montserrat, Playfair_Display } from "next/font/google";
+import { Plus_Jakarta_Sans, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 
-const montserrat = Montserrat({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   display: "swap",
 });
 
-const playfair = Playfair_Display({
+const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-serif",
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -34,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${plusJakartaSans.variable} ${cormorantGaramond.variable}`}>
       <body>{children}</body>
     </html>
   );

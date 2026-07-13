@@ -30,7 +30,7 @@ export default function AboutPage() {
       <section 
         className="hero-section" 
         style={{ 
-          backgroundImage: "linear-gradient(to bottom, rgba(8, 9, 12, 0.6), rgba(8, 9, 12, 0.98)), url('/assets/project_highrise.png')",
+          backgroundImage: "linear-gradient(to right, rgba(10, 15, 30, 0.7) 0%, rgba(10, 15, 30, 0.4) 35%, rgba(10, 15, 30, 0.05) 100%), url('/assets/project_highrise.png')",
           height: "40vh",
           minHeight: "350px",
           display: "flex",
@@ -40,7 +40,7 @@ export default function AboutPage() {
         <div className="container" style={{ paddingTop: "80px" }}>
           <span className="section-subtitle">THE LEGACY PROFILES</span>
           <h1 className="hero-title" style={{ fontSize: "clamp(32px, 5vw, 48px)", margin: "10px 0" }}>About Us</h1>
-          <p className="hero-desc" style={{ fontSize: "16px", maxWidth: "600px" }}>
+          <p className="hero-desc" style={{ fontSize: "18px", maxWidth: "600px" }}>
             Learn about our core pillars, engineering history, and absolute pursuit of quality since 2011.
           </p>
         </div>
@@ -99,7 +99,7 @@ export default function AboutPage() {
               <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "22px", color: "var(--text-white)", marginBottom: "15px" }}>
                 Our Vision
               </h3>
-              <p style={{ color: "var(--text-muted)", fontSize: "14px", lineHeight: "1.7", fontWeight: 300, margin: 0 }}>
+              <p style={{ color: "var(--text-muted)", fontSize: "16px", lineHeight: "1.7", fontWeight: 300, margin: 0 }}>
                 To create architectural masterpieces that inspire community living, elevate environmental standards, and stand as structural legacies of trust, safety, and luxurious aesthetic values for generations.
               </p>
             </div>
@@ -134,7 +134,7 @@ export default function AboutPage() {
               <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "22px", color: "var(--text-white)", marginBottom: "15px" }}>
                 Our Mission
               </h3>
-              <p style={{ color: "var(--text-muted)", fontSize: "14px", lineHeight: "1.7", fontWeight: 300, margin: 0 }}>
+              <p style={{ color: "var(--text-muted)", fontSize: "16px", lineHeight: "1.7", fontWeight: 300, margin: 0 }}>
                 To construct and hand over exceptional developments through direct on-site engineering supervision, Grade-A premium materials, legal transparency under RERA governance, and complete customer satisfaction.
               </p>
             </div>

@@ -54,9 +54,8 @@ export default function Header({ openModal }: HeaderProps) {
             <path d="M50 5L50 15" stroke="url(#gold-grad-header)" stroke-width="3" stroke-linecap="round"/>
             <defs>
               <linearGradient id="gold-grad-header" x1="20" y1="15" x2="80" y2="80" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#F3E5AB" />
-                <stop offset="50%" stop-color="#D4AF37" />
-                <stop offset="100%" stop-color="#AA7C11" />
+                <stop offset="0%" stop-color="#3A3A3C" />
+                <stop offset="100%" stop-color="#0A0A0C" />
               </linearGradient>
             </defs>
           </svg>

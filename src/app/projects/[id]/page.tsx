@@ -113,7 +113,7 @@ export default function ProjectDetailPage() {
       <section 
         className="hero-section" 
         style={{ 
-          backgroundImage: `linear-gradient(to bottom, rgba(8, 9, 12, 0.5), rgba(8, 9, 12, 0.95)), url('${project.image}')`,
+          backgroundImage: `linear-gradient(to bottom, rgba(245, 236, 229, 0.15), rgba(245, 236, 229, 0.25)), url('${project.image}')`,
           height: "60vh",
           minHeight: "450px"
         }}
@@ -121,11 +121,11 @@ export default function ProjectDetailPage() {
         <div className="hero-bg-overlay"></div>
         <div className="container hero-container" style={{ paddingTop: "120px" }}>
           <div className="hero-content" style={{ maxWidth: "800px" }}>
-            <span className="hero-tagline" style={{ display: "inline-block", background: "rgba(197, 168, 128, 0.15)", padding: "4px 12px", border: "1px solid var(--gold)" }}>
+            <span className="hero-tagline" style={{ display: "inline-block", background: "rgba(43, 58, 85, 0.08)", padding: "4px 12px", border: "1px solid var(--gold)" }}>
               {project.category.toUpperCase()} &bull; {project.status.toUpperCase()}
             </span>
             <h1 className="hero-title" style={{ marginTop: "15px", marginBottom: "15px" }}>{project.title}</h1>
-            <p className="hero-desc" style={{ marginBottom: "0", fontSize: "16px" }}>{project.location}</p>
+            <p className="hero-desc" style={{ marginBottom: "0", fontSize: "18px" }}>{project.location}</p>
           </div>
         </div>
       </section>
@@ -181,16 +181,16 @@ export default function ProjectDetailPage() {
                   Key Project Facts
                 </h3>
                 <div style={{ display: "grid", gap: "15px" }}>
-                  <div style={{ display: "flex", justifyContent: "space-between", padding: "10px 0", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", padding: "10px 0", borderBottom: "1px solid var(--border-color)" }}>
                     <span style={{ color: "var(--text-muted)", fontSize: "14px" }}>Typology</span>
                     <span style={{ color: "var(--text-white)", fontWeight: 500, fontSize: "14px" }}>{project.specs}</span>
                   </div>
-                  <div style={{ display: "flex", justifyContent: "space-between", padding: "10px 0", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", padding: "10px 0", borderBottom: "1px solid var(--border-color)" }}>
                     <span style={{ color: "var(--text-muted)", fontSize: "14px" }}>Investment Bracket</span>
                     <span style={{ color: "var(--gold)", fontWeight: 600, fontSize: "14px" }}>{project.price}</span>
                   </div>
                   {project.features.map((feature, idx) => (
-                    <div key={idx} style={{ display: "flex", justifyContent: "space-between", padding: "10px 0", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+                    <div key={idx} style={{ display: "flex", justifyContent: "space-between", padding: "10px 0", borderBottom: "1px solid var(--border-color)" }}>
                       <span style={{ color: "var(--text-muted)", fontSize: "14px" }}>{feature.label}</span>
                       <span style={{ color: "var(--text-white)", fontWeight: 500, fontSize: "14px" }}>{feature.value}</span>
                     </div>

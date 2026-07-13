@@ -28,11 +28,11 @@ export default function Footer() {
         <div className="footer-brand">
           <a href="#home" className="logo footer-logo">
             <svg className="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M50 15L80 40V80H65V60H35V80H20V40L50 15Z" stroke="#D4AF37" stroke-width="3" stroke-linejoin="round" />
-              <path d="M50 5L50 15" stroke="#D4AF37" stroke-width="3" stroke-linecap="round" />
+              <path d="M50 15L80 40V80H65V60H35V80H20V40L50 15Z" stroke="var(--gold)" stroke-width="3" stroke-linejoin="round" />
+              <path d="M50 5L50 15" stroke="var(--gold)" stroke-width="3" stroke-linecap="round" />
             </svg>
             <div className="logo-text">
-              <span className="brand-name text-white">SIDDHIVINAYAK</span>
+              <span className="brand-name">SIDDHIVINAYAK</span>
               <span className="brand-sub">DEVELOPERS</span>
             </div>
           </a>
